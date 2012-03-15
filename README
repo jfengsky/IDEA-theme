@@ -7,7 +7,7 @@
 3.如何显示行号：Settings->Editor->Appearance标签项，勾选Show line numbers
 
 
-IDEA 快捷键 
+ 
 Ctrl + Space     完成类、方法、变量名称的自动输入
 Ctrl + B     跳转到定义处
 Ctrl + Alt + L         根据模板格式化选择的代码
