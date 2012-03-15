@@ -1,0 +1,30 @@
+解压至 C:\php5，把压缩包中的 php.ini-recommended，更名为 php.ini，然后打开修改几个选项：
+
+error_reporting = E_ALL
+display_errors = On
+extension_dir = "C:\php5\ext"
+ 
+; 动态扩展，可以根据需要去掉 extension 前面的注释 ; 
+; 如加载 PDO, MySQL
+extension=php_pdo.dll
+extension=php_pdo_mysql.dll
+ 
+; CGI 设置
+cgi.fix_pathinfo = 1
+
+
+start_nginx.bat
+
+@echo off
+echo Starting PHP FastCGI...
+RunHiddenConsole C:/php5/php-cgi.exe -b 127.0.0.1:9000 -c C:/php5/php.ini
+echo Starting nginx...
+C:/nginx/nginx.exe -p C:/nginx
+
+stop_nginx.bat
+@echo off
+echo Stopping nginx...
+taskkill /F /IM nginx.exe > nul
+echo Stopping PHP FastCGI...
+taskkill /F /IM php-cgi.exe > nul
+exit
