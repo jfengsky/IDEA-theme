@@ -21,3 +21,6 @@ stash（暫存）
 status（狀態）
 tag（標籤）
 -d（還原已被刪除的檔案）
+
+fatal: remote origin already exists.
+git remote rm origin
