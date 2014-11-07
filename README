@@ -11,3 +11,8 @@
 Ctrl + Space     完成类、方法、变量名称的自动输入
 Ctrl + B     跳转到定义处
 Ctrl + Alt + L         根据模板格式化选择的代码
+
+#####yosmite 
+* 卸载java1.8
+  
+    sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
